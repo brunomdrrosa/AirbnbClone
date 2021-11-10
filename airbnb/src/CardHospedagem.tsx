@@ -3,7 +3,7 @@ import './App.css';
 
 export default function CardHospedagem() {
   return (
-    <Card border="danger" style={{ width: "18rem" }}>
+    <Card border="danger" style={{width: "18rem"}}>
       <Card.Img
         variant="top"
         src="https://vidacigana.com/wp-content/uploads/2018/06/como-funciona-airbnb-1.jpg"
