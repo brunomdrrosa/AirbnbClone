@@ -11,14 +11,14 @@ async function main() {
 
     // console.log("Adicionando casas...");
     // let c1 = await CasaRepositorio.criar({
-    //   id: "1",
+    //   id: "2",
     //   imagem:
-    //     "https://a0.muscache.com/im/pictures/9a4677d9-8344-4c61-b8da-c8a8af473daa.jpg?im_w=1200",
-    //   titulo: "Novíssimo Trend",
+    //     "https://a0.muscache.com/im/pictures/5ac70395-9dc0-47f3-b9d6-6d3df4b90591.jpg?im_w=1440",
+    //   titulo: "FLAT COM VISTA INCRÍVEL EM FORTALEZA",
     //   descricao: "Casa para 2 hóspedes",
-    //   diaria: 186,
-    //   cidade: "Porto Alegre",
-    //   estado: "RS",
+    //   diaria: 166,
+    //   cidade: "Fortaleza",
+    //   estado: "CE",
     // });
     // console.log(`Casa inserida: ${c1}`);
 
