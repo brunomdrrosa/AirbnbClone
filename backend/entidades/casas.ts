@@ -1,5 +1,5 @@
 export interface Casa {
-  id: string;
+  id?: string;
   imagem: string;
   titulo: string;
   descricao: string;
