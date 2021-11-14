@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import Card from "./Card";
-// import hospedagens from "./hospedagens";
+import Footer from "./Footer";
 import api from "./api";
 
 function criarCard(hospedagens: any) {
@@ -35,16 +34,8 @@ export default class Home extends Component {
       <div>
         <h1 style={{ padding: "1rem" }}>Hospedagens</h1>
         <dl className="moradias">{this.state.hospedagens.map(criarCard)}</dl>
+        <Footer />
       </div>
     );
   }
 }
-
-// export default function Home() {
-//   return (
-//       <div>
-//       <h1 style={{padding: "1rem"}}>Hospedagens</h1>
-//       <dl className="moradias">{hospedagens.map(criarCard)}</dl>
-//       </div>
-//   );
-// }

@@ -12,11 +12,23 @@ body {
   border-radius: 10px;
 }
 
+.titulo-hospedagem {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.5rem;
+
+}
+
 .moradias {
   display: flex;
   flex-wrap: wrap;
   margin: 1rem auto;
   max-width: 90%;
+}
+
+.descricao-hospedagem {
+  font-weight: 400;
 }
 
 .moradias > .term {

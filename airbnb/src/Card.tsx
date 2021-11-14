@@ -7,10 +7,10 @@ function Card(props: any) {
     <dl className="moradias">
       <div className="term">
         <dt>
-          <img className="imagem-hospedagem" src={props.imagem} />
-          {props.nome}
+          <img className="imagem-hospedagem" src={props.imagem} alt="Imagem da hospedagem" />
+          <h1 className="titulo-hospedagem">{props.nome}</h1>
           <p>{props.id}</p>
-          <span>{props.descricao}</span>
+          <span className="descricao-hospedagem">{props.descricao}</span>
         </dt>
         <dd>{props.cidade} - {props.estado}</dd>
         <dd>R$ {props.preco}/noite</dd>

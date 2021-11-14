@@ -1,5 +1,6 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import { Casa } from "../../backend/entidades/casas";
+import Footer from './Footer';
 
 export class AdicionarHospedagem extends Component<{}, Casa> {
   constructor(props: Casa) {
@@ -31,7 +32,6 @@ export class AdicionarHospedagem extends Component<{}, Casa> {
     }
 
     this.render = () => {
-      // const [value, setValue] = React.useState('');
       const { imagem, titulo, descricao, diaria, cidade, estado } = this.state;
       return (
         <div>
@@ -51,6 +51,7 @@ export class AdicionarHospedagem extends Component<{}, Casa> {
             <input type="text" name="estado" value={estado} onChange={e => e.target.value}/>
             <button>Enviar</button>
           </form>
+          <Footer />
         </div>
       );
     };
