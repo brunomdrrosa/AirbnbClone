@@ -12,8 +12,8 @@ function Card(props: any) {
           <p>{props.id}</p>
           <span className="descricao-hospedagem">{props.descricao}</span>
         </dt>
-        <dd>{props.cidade} - {props.estado}</dd>
-        <dd>R$ {props.preco}/noite</dd>
+        <dd className="local-hospedagem">{props.cidade} - {props.estado}</dd>
+        <dd className="diaria-hospedagem">R$ {props.preco}/noite</dd>
         <Button variant="primary">Reservar agora</Button>
       </div>
     </dl>

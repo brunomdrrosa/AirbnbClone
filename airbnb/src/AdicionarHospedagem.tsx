@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Casa } from "../../backend/entidades/casas";
-import Footer from './Footer';
+import Footer from "./Footer";
 
 export class AdicionarHospedagem extends Component<{}, Casa> {
   constructor(props: Casa) {
@@ -14,7 +14,7 @@ export class AdicionarHospedagem extends Component<{}, Casa> {
       cidade: "",
       estado: "",
     };
-  
+
     async function handleSubmit(event: any) {
       event.preventDefault();
       const response = await fetch(
@@ -38,17 +38,47 @@ export class AdicionarHospedagem extends Component<{}, Casa> {
           <h1>Adicionar Hospedagem</h1>
           <form onSubmit={handleSubmit}>
             <label>Imagem:</label>
-            <input type="text" name="imagem" value={imagem} onChange={e => e.target.value}/>
+            <input
+              type="text"
+              name="imagem"
+              value={imagem}
+              onChange={(e) => e.target.value}
+            />
             <label>Titulo:</label>
-            <input type="text" name="titulo" value={titulo} onChange={e => e.target.value}/>
+            <input
+              type="text"
+              name="titulo"
+              value={titulo}
+              onChange={(e) => e.target.value}
+            />
             <label>Descrição:</label>
-            <input type="text" name="descricao" value={descricao} onChange={e => e.target.value}/>
+            <input
+              type="text"
+              name="descricao"
+              value={descricao}
+              onChange={(e) => e.target.value}
+            />
             <label>Diaria:</label>
-            <input type="text" name="diaria" value={diaria} onChange={e => e.target.value}/>
+            <input
+              type="text"
+              name="diaria"
+              value={diaria}
+              onChange={(e) => e.target.value}
+            />
             <label>Cidade:</label>
-            <input type="text" name="cidade" value={cidade} onChange={e => e.target.value}/>
+            <input
+              type="text"
+              name="cidade"
+              value={cidade}
+              onChange={(e) => e.target.value}
+            />
             <label>Estado:</label>
-            <input type="text" name="estado" value={estado} onChange={e => e.target.value}/>
+            <input
+              type="text"
+              name="estado"
+              value={estado}
+              onChange={(e) => e.target.value}
+            />
             <button>Enviar</button>
           </form>
           <Footer />
