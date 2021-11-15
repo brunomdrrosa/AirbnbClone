@@ -2,7 +2,7 @@ import { Casa } from "../entidades/casas";
 import { model, Schema } from "mongoose";
 
 const CasaSchema = new Schema<Casa>({
-  id: { type: String, required: true },
+  id: { type: Number, required: true },
   imagem: { type: String, required: true },
   titulo: { type: String, required: true },
   descricao: { type: String, required: true },

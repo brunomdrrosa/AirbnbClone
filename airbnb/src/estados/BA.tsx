@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Card from "./Card";
-import Footer from "./Footer";
-import api from "./api";
-import "./index.css";
+import Card from "../Card";
+import Footer from "../Footer";
+import "../index.css";
+import axios from "axios";
 
 let hoje = new Date();
 let horaAtual = hoje.getHours();
@@ -30,13 +30,17 @@ function criarCard(hospedagens: any) {
   );
 }
 
-export default class Home extends Component {
+export default class MaiorPreco extends Component {
   state = {
     hospedagens: [],
   };
 
   async componentDidMount() {
-    const response = await api.get("");
+    const apiMaiorPreco = axios.create({
+      baseURL: "http://localhost:4000/casas/BA",
+    })
+
+    const response = await apiMaiorPreco.get("");
     console.log(response.data);
 
     this.setState({ hospedagens: response.data });

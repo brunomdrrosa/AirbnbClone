@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Card from "./Card";
 import Footer from "./Footer";
-import api from "./api";
 import "./index.css";
+import axios from "axios";
 
 let hoje = new Date();
 let horaAtual = hoje.getHours();
@@ -30,13 +30,17 @@ function criarCard(hospedagens: any) {
   );
 }
 
-export default class Home extends Component {
+export default class MenorPreco extends Component {
   state = {
     hospedagens: [],
   };
 
   async componentDidMount() {
-    const response = await api.get("");
+    const apiMenorPreco = axios.create({
+      baseURL: "http://localhost:4000/casas/ordenarPorMenorPreco",
+    })
+
+    const response = await apiMenorPreco.get("");
     console.log(response.data);
 
     this.setState({ hospedagens: response.data });
@@ -45,7 +49,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <h1 className="saudacoes">{saudacoes}, aqui estão as hospedagens:</h1>
+        <h1 className="saudacoes">{saudacoes}, aqui estão as hospedagens ordenadas por menor preço:</h1>
         <dl className="moradias">{this.state.hospedagens.map(criarCard)}</dl>
         <Footer />
       </div>
