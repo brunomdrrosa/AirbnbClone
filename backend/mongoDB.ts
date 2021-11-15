@@ -2,15 +2,17 @@ import { appendFile } from "fs";
 import { connect, disconnect } from "mongoose";
 import * as CasaRepositorio from "./persistencia/casaRepositorio";
 import express from "express";
+require('dotenv').config()
+const db = require('db')
 
 const app = express();
 
-const uri =
-  "mongodb+srv://dbUser:bruno2308@cluster0.yoorm.mongodb.net/airbnbDatabase?retryWrites=true&w=majority";
+const uri = process.env.MONGODB_URI;
+console.log(process.env.MONGODB_URI)
 
 async function main() {
   try {
-    const cliente = await connect(uri);
+    const cliente = await connect(uri!);
     console.log("Conectado ao MongoDB Atlas");
 
     // console.log("Adicionando casas...");

@@ -5,6 +5,7 @@ import App from './App';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import Home from './Home';
+import AdicionarHospedagem from './AdicionarHospedagem';
 import Sobre from "./Sobre";
 import MenorPreco from './MenorPreco';
 import MaiorPreco from './MaiorPreco';
@@ -21,6 +22,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<App />} >
       <Route path="/" element={<Home />} />
+        <Route path="adicionar" element={<AdicionarHospedagem />} />
         <Route path="sobre" element={<Sobre />} />
         <Route path="menorPreco" element={<MenorPreco />} />
         <Route path="maiorPreco" element={<MaiorPreco />} />
