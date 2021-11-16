@@ -7,6 +7,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+form {
+  padding: 2rem;
+}
+
+label, button {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form { 
+  padding-left: 2rem;
+  padding-top: 2rem;
+}
+
 .imagem-hospedagem {
   border-radius: 0.625rem;
   width: 16rem;

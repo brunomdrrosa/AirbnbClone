@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon backend/index.ts",
     "start": "concurrently \"cd airbnb/ && npm start\"",
-    "build": "tsc"
+    "build": "concurrently \"cd airbnb/ && npm run build\""
   },
   "repository": {
     "type": "git",

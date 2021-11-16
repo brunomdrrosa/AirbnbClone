@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import "./index.css";
 
 const Create = () => {
   const [imagem, setImagem] = useState("");
@@ -24,7 +25,7 @@ const Create = () => {
 
   return (
     <div>
-      <h2>Adicionar uma nova hospedagem</h2>
+      <h2 className="form">Adicionar uma nova hospedagem</h2>
       <form onSubmit={handleSubmit}>
         <label>Título da hospedagem:</label>
         <input
@@ -33,29 +34,29 @@ const Create = () => {
           value={titulo}
           onChange={(e) => setTitulo(e.target.value)}
         />
-        <label>Blog Area</label>
+        <label>Imagem da hospedagem:</label>
         <input
           required
           value={imagem}
           onChange={(e) => setImagem(e.target.value)}
         ></input>
-        <label>Blog Author</label>
+        <label>Descrição:</label>
         <input
           value={descricao}
           onChange={(e) => setDescricao(e.target.value)}
         >
         </input>
-        <label>Blog Content</label>
+        <label>Valor da diária</label>
         <input
           value={diaria}
           onChange={(e) => setDiaria(e.target.value)}
         ></input>
-        <label>Blog Content</label>
+        <label>Cidade</label>
         <input
           value={cidade}
           onChange={(e) => setCidade(e.target.value)}
         ></input>
-        <label>Blog Content</label>
+        <label>Estado</label>
         <input
           value={estado}
           onChange={(e) => setEstado(e.target.value)}
