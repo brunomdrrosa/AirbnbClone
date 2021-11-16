@@ -1,0 +1,81 @@
+.sobre-principal {
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .sobre-principal {
+    padding: 10px;
+  }
+}
+
+.tech {
+  display: flex;
+  justify-content: space-between;
+  width: 37%;
+  margin: 0 auto;
+}
+
+.card-hospedagem {
+  display: flex;
+  flex-direction: row;
+  margin: 0.1rem;
+  padding: 1rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  margin: 0.1rem;
+  padding: 1rem;
+}
+
+.color-nav {
+  background-color: #ff5a5f;
+  padding: 1rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #ff5a5f;
+  color: white;
+  text-align: center;
+  padding: 10px 10px 0px 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
